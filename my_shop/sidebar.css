@@ -1,0 +1,99 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html,body{
+    height: 100%;
+}
+
+.mainBanner{
+    height: 20%;
+    /* background-color: red; */
+    /* text 중앙정렬  */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-image: url("./img/banner.jpg"); */
+    /* background-size: cover; */
+    display: flex;
+    background-color: pink;
+    margin-bottom: 10px;
+}
+
+.mainBanner .text{
+    font-size: 42px;
+    font-weight: 700;
+    /* color: white; */
+    /* x축 y축 브러의 정도 디폴트 0 */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    animation: titleText 1s ease-in-out;
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+
+}
+
+.sidebar{
+    width: 170px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    align-items: flex-start
+}
+
+
+.sidebar ul{
+    width: 100%;
+    background-color: orange;
+}
+
+.sidebar ul li{
+    list-style: none;
+    padding: 5px 0;
+    color: #ffffff;
+    border-bottom: 1px dashed rgba(255,255,255,0.3);
+    text-align: center;
+}
+.writeBtnBox {
+    width: 100%;
+ }
+
+  .writeBtn {
+    width: 170px;    
+    background: #000000;
+    border: 1px solid #000000;
+    color: #ffffff;
+    padding: 10px 20px;
+    text-align: left;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+    /* 커서 모양 변경  */
+    cursor: pointer;
+  }
+
+.contents{
+    /* width: 70%; */
+    width: calc(100% - 170px);
+    /* background-color: lightblue; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+       /* 이렇게 되면 이미지가 다 깨져서 item 다음줄로 */
+    flex-wrap: wrap;
+    padding: 0 10px;
+}
+
+.item{
+    width: 24%;
+    height: 180px;
+    background-image: url("./img/item1.jpeg");
+    background-size: cover;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}

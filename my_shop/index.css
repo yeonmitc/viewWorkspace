@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Jua&display=swap");
+
+* {
+  box-sizing: border-box;
+  font-family: "Noto Sans KR", "돋움", sans-serif;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+/* 밑줄 삭제 */
+a {
+  text-decoration: none;
+}
+
+.mainBanner{
+    height: 20%;
+    /* background-color: red; */
+    /* text 중앙정렬  */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("./img/banner.jpg");
+    background-size: cover;
+    display: flex;
+}
+
+
+/* 
+마진 사라짐 strach 되서 다 포함 시킴 
+*/
+.mainBanner .text{
+    font-size: 42px;
+    font-weight: 700;
+    color: white;
+    /* x축 y축 브러의 정도 디폴트 0 */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    animation: titleText 1s ease-in-out;
+}
+
+@keyframes titleText {
+    0% {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+  
+     /* 92% {
+      transform: translateY(-10px);
+    } 
+   */
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+
+.container{
+    /* background-color: gray; */
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    /* 상단에 붙었으면 좋갯더 */
+    align-items: flex-start;
+}
+/* 
+여기서 width 100센트 주면 화면 배율 큰 모니터 레이아웃 정렬 무너질 수 잇다
+ max 값 고정 시키자 
+*/
+.wrapper{
+    width: 100%;
+    /* 안늘어 나는거 확인  */
+    max-width: 1320px;
+    /* background-color: blue; */
+    display: flex;
+    height: 100%;
+    padding: 10px;
+}
+.sidebar{
+    /* background: yellow; */
+    /* 고정적인 수치 줄것이 */
+    width: 170px; 
+}
+
+.itemWrap{
+/* background: green; */
+/* 전체 영역에서 사이드 바만 뺀거  */
+width: calc(100% - 170px);
+height: 100%;
+}
+
+iframe{
+    width: 100%;
+    height: 100%;
+}
+
+.sidebar{
+  width: 170px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  align-items: flex-start
+}
+
+
+.sidebar ul{
+  width: 100%;
+  background-color: orange;
+}
+
+.sidebar ul li{
+  list-style: none;
+  padding: 5px 0;
+  color: #ffffff;
+  border-bottom: 1px dashed rgba(255,255,255,0.3);
+  text-align: center;
+}
+.writeBtnBox {
+  width: 100%;
+}
+
+.writeBtn {
+  width: 170px;    
+  background: #000000;
+  border: 1px solid #000000;
+  color: #ffffff;
+  padding: 10px 20px;
+  text-align: left;
+  font-size: 16px;
+  transition: all 0.3s ease-in-out;
+  /* 커서 모양 변경  */
+  cursor: pointer;
+}
